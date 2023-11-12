@@ -1,0 +1,7 @@
+Gemfile.lock
+coverage/*
+.idea
+.env
+.byebug_history
+.ruby-version
+.travis.yml
