@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'minitest/assertions'
+require 'prism_checker'
 
 module Minitest::Assertions
   def assert_page_like(page_object, expectation)
