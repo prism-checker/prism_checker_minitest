@@ -1,16 +1,18 @@
-require_relative 'lib/prism_checker_minitest/version'
-
 Gem::Specification.new do |spec|
-  spec.name          = 'prism_checker_minitest'
-  spec.version       = PrismCheckerMinitest::VERSION
-  spec.authors       = ['Ganglion-17']
-  spec.email         = ['ganglion1717@gmail.com']
-
-  spec.summary       = 'Minitest matcher for SitePrism'
-  spec.description   = 'Matcher gives you a simple and clean describing your site'
-  spec.homepage      = 'https://github.com/prism-checker/prism_checker_minitest'
-  spec.license       = 'BSD-3-Clause'
+  spec.name                  = 'prism_checker_minitest'
+  spec.version               = '0.1.0'
+  spec.required_ruby_version = '>= 2.5'
+  spec.platform              = Gem::Platform::RUBY
+  spec.license               = 'BSD-3-Clause'
+  spec.authors               = %w[Ganglion-17]
+  spec.email                 = %w[ganglion1717@gmail.com]
+  spec.homepage              = 'https://github.com/prism-checker/prism_checker_minitest'
+  spec.summary               = 'Short and easy-to-read browser tests with clear error messages'
+  spec.description           = <<~DESCR
+    Prism checker is an extension for rspec and minitest, built on top of the SitePrism gem and using its page object model.
+    It allows you to write short, easy-to-read browser tests with clear error messages
+  DESCR
+  spec.files                 = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
-  spec.files        = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
-  spec.require_paths = ['lib']
+  spec.require_paths         = ['lib']
 end
