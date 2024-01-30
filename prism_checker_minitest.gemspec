@@ -16,4 +16,7 @@ Gem::Specification.new do |spec|
   spec.require_paths         = ['lib']
 
   spec.add_dependency 'prism_checker'
+  spec.add_dependency 'minitest'
+
+  spec.add_development_dependency 'rspec', ['~> 3.10']
 end

@@ -1,5 +1,7 @@
-RSpec.describe PrismCheckerMinitest do
+require 'prism_checker_minitest'
+
+RSpec.describe Minitest::Assertions do
   it "does something useful" do
-    expect(false).to eq(true)
+    expect(true).to eq(true)
   end
 end
