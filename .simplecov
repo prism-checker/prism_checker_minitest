@@ -8,4 +8,4 @@ SimpleCov.start do
 end
 
 SimpleCov.minimum_coverage 95
-SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter if ENV['SIMPLE_COV_JSON_FORMATTER']
+SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter #if ENV['SIMPLE_COV_JSON_FORMATTER']
