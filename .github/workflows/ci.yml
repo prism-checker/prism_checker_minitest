@@ -20,7 +20,9 @@ jobs:
       - name: Run tests
         env:
           SIMPLE_COV_JSON_FORMATTER: SIMPLE_COV_JSON_FORMATTER
-        run: bundle exec rspec spec
+        run: |
+          bundle install
+          bundle exec rspec spec
 
       - run: |
           pwd
