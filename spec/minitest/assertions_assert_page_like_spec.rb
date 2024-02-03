@@ -23,8 +23,10 @@ class DummyPage < SitePrism::Page
   end
 end
 
-RSpec.describe Minitest::Assertions do
-  it 'tests assert_page_like' do
-    expect(DummyAssert.new.assert_page_like(DummyPage.new, 'text')).to be_truthy
+describe Minitest::Assertions do
+  describe '.assert_page_like' do
+    it 'tests assert_page_like' do
+      expect(DummyAssert.new.assert_page_like(DummyPage.new, 'text')).to be_truthy
+    end
   end
 end

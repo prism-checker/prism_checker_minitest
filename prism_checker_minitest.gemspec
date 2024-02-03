@@ -17,11 +17,13 @@ Gem::Specification.new do |s|
   s.files                 = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   s.require_paths         = ['lib']
 
-  s.add_dependency 'prism_checker', '>= 0.0.3'
   s.add_dependency 'minitest'
+  s.add_dependency 'prism_checker', '>= 0.0.3'
 
-  s.add_development_dependency 'rspec', ['~> 3.10']
   s.add_development_dependency 'byebug'
+  s.add_development_dependency 'rspec', ['~> 3.10']
+  s.add_development_dependency 'rubocop', ['~> 1.11.0']
+  s.add_development_dependency 'rubocop-rspec', ['~> 2.2.0']
   s.add_development_dependency 'simplecov', ['~> 0.22']
   s.add_development_dependency 'simplecov_json_formatter'
 end

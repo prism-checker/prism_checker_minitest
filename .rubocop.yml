@@ -1,0 +1,16 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+require:
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 140
+
+Style/Documentation:
+  Enabled: false
