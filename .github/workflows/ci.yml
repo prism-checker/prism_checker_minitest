@@ -28,7 +28,9 @@ jobs:
           pwd
           ls -a1
           echo ${{github.workspace}}
+          echo ${{secrets.CC_TEST_REPORTER_ID}}
           ls -a1 ${{github.workspace}}/coverage
+          cat ${{github.workspace}}/coverage/coverage.json
 
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
