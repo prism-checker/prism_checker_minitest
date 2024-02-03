@@ -7,9 +7,5 @@ SimpleCov.start do
   add_filter '/spec'
 end
 
-puts '=' * 80
-puts 'DEBUG CI'
-puts '=' * 80
-
 SimpleCov.minimum_coverage 95
 SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter if ENV['SIMPLE_COV_JSON_FORMATTER']

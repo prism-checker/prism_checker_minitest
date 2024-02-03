@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'prism_checker_minitest'
+require 'spec_helper'
 
 class DummyAssert
   include Minitest::Assertions
