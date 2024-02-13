@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.files                 = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   s.require_paths         = ['lib']
 
-  spec.add_dependency 'minitest', '>= 5.1'
-  spec.add_dependency 'prism_checker', '>= 1.0'
+  s.add_dependency 'minitest', '>= 5.1'
+  s.add_dependency 'prism_checker', '>= 1.0'
 
   s.add_development_dependency 'byebug', '~> 11.1'
   s.add_development_dependency 'rspec', '~> 3.10'
