@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name                  = 'prism_checker_minitest'
-  spec.version               = '0.0.3'
+  spec.version               = '1.0.0'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
   spec.platform              = Gem::Platform::RUBY
   spec.license               = 'BSD-3-Clause'
@@ -15,8 +15,8 @@ Gem::Specification.new do |spec|
   spec.files                 = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   spec.require_paths         = ['lib']
 
-  spec.add_dependency 'prism_checker'
-  spec.add_dependency 'minitest'
+  spec.add_dependency 'prism_checker', '>= 1.0'
+  spec.add_dependency 'minitest', '>= 5.1'
 
   spec.add_development_dependency 'rspec', ['~> 3.10']
 end
