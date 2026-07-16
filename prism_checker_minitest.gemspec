@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.name                  = 'prism_checker_minitest'
   s.version               = '1.1.0'
-  s.required_ruby_version = '>= 3.1'
+  s.required_ruby_version = '>= 3.3'
   s.platform              = Gem::Platform::RUBY
   s.license               = 'BSD-3-Clause'
   s.authors               = %w[Ganglion-17]
