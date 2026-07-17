@@ -6,28 +6,37 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: '3.4'
           bundler-cache: true
 
-      - name: Run tests
-        env:
-          SIMPLE_COV_JSON_FORMATTER: SIMPLE_COV_JSON_FORMATTER
-        run: |
-          bundle install
-          bundle exec rspec spec
+      - name: Run rubocop
+        run: bundle exec rubocop
 
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v5.0.0
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: ['3.3', '3.4']
+
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          coverageLocations: |
-            ${{github.workspace}}/coverage/coverage.json:simplecov
-        env:
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+
+      # Coverage is measured and enforced by simplecov itself: see .simplecov,
+      # which fails the run below 95%.
+      - name: Run tests
+        run: bundle exec rspec spec
