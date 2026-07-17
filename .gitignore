@@ -5,3 +5,6 @@ coverage/*
 .rspec
 .ruby-version
 .travis.yml
+
+# Gems built locally by `gem build`
+*.gem
